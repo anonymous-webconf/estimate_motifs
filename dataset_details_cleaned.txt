@@ -1,0 +1,56 @@
+#######################
+
+LastFM Asia
+Cyclic C3 (LastFM Asia):	0
+Acyclic C3 (LastFM Asia):	15705
+Cyclic C4 (LastFM Asia):	0
+Butterfly (LastFM Asia):	11553
+Leaf-C3 (LastFM Asia):      0
+#######################
+
+p2p-Gnutella
+Cyclic C3 (p2p-Gnutella):	53
+Acyclic C3 (p2p-Gnutella):	2250
+Cyclic C4 (p2p-Gnutella):	142
+Butterfly (p2p-Gnutella):	57843
+Leaf-C3 (p2p-Gnutella):	    0
+#######################
+
+Facebook
+Cyclic C3 (Facebook):	0
+Acyclic C3 (Facebook):	1601830
+Cyclic C4 (Facebook):	0
+Butterfly (Facebook):	1768727
+Leaf-C3 (Facebook):     0
+#######################
+
+Wiki-Vote
+Cyclic C3 (Wiki-Vote):	6795
+Acyclic C3 (Wiki-Vote):	251299
+Cyclic C4 (Wiki-Vote):	55355
+Butterfly (Wiki-Vote):	3915862
+Leaf-C3 (Wiki-Vote):	145896
+#######################
+
+Twitter
+Cyclic C3 (Twitter):	3818
+Acyclic C3 (Twitter):	383539
+Cyclic C4 (Twitter):	8316
+Butterfly (Twitter):	3076069
+Leaf-C3 (Twitter):	    241900
+#######################
+
+soc-Slashdot
+Cyclic C3 (soc-Slashdot):	52
+Acyclic C3 (soc-Slashdot):	3450
+Cyclic C4 (soc-Slashdot):	169
+Butterfly (soc-Slashdot):	116432
+#######################
+
+soc-Epinions
+Cyclic C3 (soc-Epinions):	6970
+Acyclic C3 (soc-Epinions):	443435
+Cyclic C4 (soc-Epinions):	65234
+Butterfly (soc-Epinions):	12262835
+#######################
+
