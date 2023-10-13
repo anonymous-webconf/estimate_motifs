@@ -1,5 +1,7 @@
 # Frameworks to Estimate Motif Counts in Directed Networks
-This is our code base, fully developed by us in Python to evaluate the performance of our three frameworks (namely RW-IS, RW-RJ and RW-BB). The files provided in this  repository can be leveraged to create graph objects that are compatible with the three techniques. We have predefined exact counting functions for each class that can count _wedges, cyclic-C3, cyclic-C4, source-S3, leaf-C3, butterfly, clique-K4_ graphlets. Below is the pictorial representation of each graphlet. These exact counts form the ground truths for our error comparisons across the techniques introduced. 
+This is our code base, fully developed by us in Python to evaluate the performance of our three frameworks (namely RW-IS, RW-RJ and RW-BB). The files provided in this  repository can be leveraged to create graph objects that are compatible with the three techniques. We have predefined exact counting functions for each class that can count _wedges, cyclic-C3, cyclic-C4, source-S3, leaf-C3 (G24), butterfly, clique-K4_ graphlets. Below is the pictorial representation of each graphlet. These exact counts form the ground truths for our error comparisons across the techniques introduced. 
+![image](https://github.com/anonymous-webconf/estimate_motifs/assets/147694163/81f88fa6-f71c-4097-b29b-783c137b6d8f)
+
 
 ## About the Classes:
 The file [`class_graphs.py`](class_graphs.py) contains three graph classes: `Graph_RWIS`, `Graph_RWRJ` and `Graph_RWBB`. Each class supports the corresponding estimation framework. When loading graphs from dataset, it is mandatory to select one mode among `rwis`, `rwrj` or `rwbb`. 
@@ -59,3 +61,16 @@ Note that the $\alpha$ parameter is only used to generate a random walk sequence
 >For RW-BB, the stationary distribution exists if and only if alpha>= 0.5. Do NOT use a lower alpha value while estimating stationary distribution in RW-BB based objects as they will not yield a correct stationary distribution estimate.
 
 ## Estimating Graphlet Count
+Any sized graphlet can be counted using the three frameworks. Unlike exact counting, where a counting function is required to count the number of graphlets in the graph, our random walk based implementaion only requires the adjacency matrix of the graphlet to estimate its count. Below are the methods to count graphlets across the three classes:
+1. **Graph_RWIS**: In `class_graphs.py`, use the class method `rw_count_motif_back_button()` to count any graphlet that is discoverable and countable under back button model constraints. Refer to our literature for details. For example, to estimate _cyclic-C4_ count under this framework for Epinions dataset, over $10^4$ walk steps and $\alpha=0.8$, pass the following arguments:
+   ```
+   rw_count_motif_back_button(self, seed, walk_len: int, motif_adj_mat: list, k: int, alpha: int)
+   ```
+2. **Graph_RWRJ**: In `class_graphs.py`, use the class method `rw_count_motif_back_button()` to count any graphlet that is discoverable and countable under back button model constraints. Refer to our literature for details. For example, to estimate _cyclic-C4_ count under this framework for Epinions dataset, over $10^4$ walk steps and $\alpha=0.8$, pass the following arguments:
+   ```
+   rw_count_motif_back_button(self, seed, walk_len: int, motif_adj_mat: list, k: int, alpha: int)
+   ```
+3. **Graph_RWBB**: In `class_graphs.py`, use the class method `rw_count_motif_back_button()` to count any graphlet that is discoverable and countable under back button model constraints. Refer to our literature for details. For example, to estimate _cyclic-C4_ count under this framework for Epinions dataset, over $10^4$ walk steps and $\alpha=0.8$, pass the following arguments:
+   ```
+   rw_count_motif_back_button(self, seed, walk_len: int, motif_adj_mat: list, k: int, alpha: int)
+   ```
