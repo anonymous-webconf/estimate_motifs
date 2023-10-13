@@ -113,22 +113,22 @@ class Graph_RWIS():
         self.is_clean = True
 
     def get_neighbour(self, v: int):
-        # if self.in_deg[v]==0:
-        #   return random.choice(self.out_neigh[v])
-        # elif self.out_deg[v]==0:
-        #   return random.choice(self.in_neigh[v])
-        # din_dout = self.in_deg[v] + self.out_deg[v]
-        # # choose either the in neighbour or out neighbour
-        # prob_out = self.out_deg[v]/din_dout
-        # prob_in = self.in_deg[v]/din_dout
-        # choice = random.choices( ['in_n', 'out_n'], weights= [prob_in, prob_out], k=1)[0]
-        # if choice == 'in_n':
-        #       return random.choice(self.in_neigh[v])
-        # else:
-        #       return random.choice(self.out_neigh[v])
-        # return np.random.choice(sampled_vertices,1,p=[sample_prob_out, sample_prob_in])[0]
-        vertex = random.choice(list(set(self.in_neigh[v]+self.out_neigh[v])))
-        return vertex
+        if self.in_deg[v]==0:
+          return random.choice(self.out_neigh[v])
+        elif self.out_deg[v]==0:
+          return random.choice(self.in_neigh[v])
+        din_dout = self.in_deg[v] + self.out_deg[v]
+        # choose either the in neighbour or out neighbour
+        prob_out = self.out_deg[v]/din_dout
+        prob_in = self.in_deg[v]/din_dout
+        choice = random.choices( ['in_n', 'out_n'], weights= [prob_in, prob_out], k=1)[0]
+        if choice == 'in_n':
+              return random.choice(self.in_neigh[v])
+        else:
+              return random.choice(self.out_neigh[v])
+        return np.random.choice(sampled_vertices,1,p=[sample_prob_out, sample_prob_in])[0]
+        # vertex = random.choice(list(set(self.in_neigh[v]+self.out_neigh[v])))
+        # return vertex
 
     def edge_degree(self, e: tuple):
         u, v = e[0], e[1]
